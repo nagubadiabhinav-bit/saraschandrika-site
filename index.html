@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saraschandrika Industries</title>
 <meta name="description" content="Saraschandrika Industries.">
-<meta name="theme-color" content="#1b2550">
+<meta name="theme-color" content="#16181d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Syncopate:wght@700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1b2550;      /* primary: deep ink navy, trust */
-    --steel: #5a6a8c;     /* secondary: steel blue */
-    --paper: #f5f3ef;     /* warm off-white page */
-    --copper: #c4612d;    /* accent: copper, sets the brand apart from plain corporate blue */
-    --mute: #6b7085;
+    --ink: #16181d;     /* charcoal: header and headline */
+    --ivory: #f3efe7;   /* warm ivory page */
+    --brass: #9c7c4c;   /* muted brass accent */
+    --mute: #7a7468;    /* warm grey for small text */
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
@@ -23,13 +22,13 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--paper);
-    color: var(--navy);
+    background: var(--ivory);
+    color: var(--ink);
     font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
   }
   header {
-    background: linear-gradient(90deg, var(--navy), #2c3a72);
-    color: #fff;
+    background: var(--ink);
+    color: var(--ivory);
     padding: 22px 6vw;
     font-weight: 600;
     font-size: 12px;
@@ -38,60 +37,52 @@
   }
   main {
     flex: 1;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5vw;
-    padding: 6vw;
+    justify-content: center;
+    text-align: center;
+    padding: 8vh 6vw;
   }
   h1 {
-    font-weight: 900;
-    font-size: clamp(44px, 7vw, 112px);
-    line-height: 0.98;
-    letter-spacing: -0.02em;
-  }
-  .soon {
-    display: inline-block;
-    margin-top: 36px;
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 0.3em;
+    font-family: Syncopate, "Arial Black", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
-    color: var(--copper);
+    font-size: min(6.6vw, 84px);
+    line-height: 1.18;
+    letter-spacing: 0.02em;
   }
-  /* abstract panel: navy-to-steel card with soft concentric arcs and a copper glow */
-  .panel {
-    aspect-ratio: 4 / 3.4;
-    border-radius: 28px;
-    background:
-      radial-gradient(circle at 78% 82%, rgba(196, 97, 45, 0.55), transparent 38%),
-      repeating-radial-gradient(circle at 78% 82%, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px 34px),
-      linear-gradient(150deg, var(--navy) 0%, #2c3a72 55%, var(--steel) 100%);
-    box-shadow: 0 30px 60px -30px rgba(27, 37, 80, 0.55);
+  h1 span { display: block; }
+  .soon {
+    margin-top: 44px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.42em;
+    margin-right: -0.42em; /* keeps the spaced line optically centred */
+    text-transform: uppercase;
+    color: var(--brass);
   }
   footer {
     padding: 22px 6vw;
+    text-align: center;
     font-size: 12px;
     font-weight: 500;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     color: var(--mute);
   }
-  @media (max-width: 820px) {
-    main { grid-template-columns: 1fr; align-content: center; padding: 40px 24px; gap: 40px; }
-    h1 { font-size: min(calc((100vw - 48px) / 10.4), 72px); }
-    .soon { margin-top: 24px; }
-    .panel { aspect-ratio: 16 / 10; border-radius: 22px; }
-    header, footer { padding-left: 24px; padding-right: 24px; }
+  @media (max-width: 700px) {
+    header { padding: 20px 24px; }
+    main { padding: 40px 24px; }
+    h1 { font-size: calc((100vw - 48px) / 12.6); }
+    .soon { margin-top: 28px; font-size: 11px; }
   }
 </style>
 </head>
 <body>
   <header>Saraschandrika</header>
   <main>
-    <div>
-      <h1>Saraschandrika Industries</h1>
-      <span class="soon">Coming soon</span>
-    </div>
+    <h1><span>Saraschandrika</span><span>Industries</span></h1>
+    <p class="soon">Coming soon</p>
   </main>
   <footer>&copy; 2026 Saraschandrika Industries</footer>
 </body>
