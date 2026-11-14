@@ -4,140 +4,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saraschandrika Industries</title>
-<meta name="description" content="Saraschandrika Industries Pvt Ltd. Ferrous castings, Zaheerabad, Telangana, India.">
-<meta name="theme-color" content="#0c0d0f">
+<meta name="description" content="Saraschandrika Industries Pvt Ltd.">
+<meta name="theme-color" content="#ebeae4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0c0d0f;
-    --fg: #f1ede6;
-    --mute: #8a857d;
-    --molten: #ff7a1a;
-    --molten-deep: #c2410c;
-  }
+  :root { --bg: #ebeae4; --fg: #1c1d1c; --mute: #6f706b; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { height: 100%; }
   body {
     background: var(--bg);
     color: var(--fg);
-    font-family: Inter, system-ui, sans-serif;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
-  }
-  /* warm glow rising from the bottom, like a furnace mouth */
-  body::before {
-    content: "";
-    position: fixed;
-    left: 50%;
-    bottom: -45vh;
-    width: 140vw;
-    height: 80vh;
-    transform: translateX(-50%);
-    background: radial-gradient(ellipse at center, rgba(255, 122, 26, 0.22) 0%, rgba(194, 65, 12, 0.08) 40%, transparent 70%);
-    pointer-events: none;
-    animation: breathe 6s ease-in-out infinite;
-  }
-  /* faint grain */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-    pointer-events: none;
-  }
-  @keyframes breathe {
-    0%, 100% { opacity: 0.75; }
-    50% { opacity: 1; }
-  }
-  main {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    padding: 48px 20px;
-    position: relative;
-    z-index: 1;
-  }
-  .eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--mute);
-    margin-bottom: 28px;
+    padding: 6vw 5vw;
+    overflow-x: hidden;
   }
   h1 {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: Anton, "Bebas Neue", Impact, "Arial Narrow", sans-serif;
     font-weight: 400;
-    font-size: clamp(40px, 9vw, 104px);
-    line-height: 1;
-    letter-spacing: 0.01em;
-  }
-  h1 span {
-    display: block;
-    font-family: Inter, system-ui, sans-serif;
-    font-weight: 500;
-    font-size: clamp(13px, 1.6vw, 17px);
-    letter-spacing: 0.6em;
     text-transform: uppercase;
-    margin-top: 18px;
-    margin-right: -0.6em; /* keeps the spaced word optically centred */
-    color: var(--fg);
+    line-height: 0.86;
+    letter-spacing: -0.01em;
+    font-size: 13.4vw;
   }
-  .pour {
-    width: 1px;
-    height: 72px;
-    margin: 40px auto 36px;
-    background: linear-gradient(to bottom, transparent, var(--molten) 40%, var(--molten-deep));
-    box-shadow: 0 0 12px 1px rgba(255, 122, 26, 0.55);
-    animation: pour 2.4s ease-out both;
-    transform-origin: top;
-  }
-  @keyframes pour {
-    from { transform: scaleY(0); opacity: 0; }
-    to { transform: scaleY(1); opacity: 1; }
-  }
-  .tag {
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-style: italic;
-    font-size: clamp(18px, 2.4vw, 24px);
-    color: #d8d2c8;
-  }
-  .soon {
-    margin-top: 14px;
-    font-size: 12px;
-    letter-spacing: 0.32em;
+  h1 span { display: block; white-space: nowrap; width: max-content; }
+  p {
+    margin-top: 4vw;
+    font-family: "Space Mono", ui-monospace, monospace;
+    font-size: clamp(11px, 1.1vw, 14px);
+    letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--molten);
-  }
-  footer {
-    position: relative;
-    z-index: 1;
-    padding: 24px 20px 28px;
-    text-align: center;
-    font-size: 12px;
-    letter-spacing: 0.08em;
     color: var(--mute);
   }
-  @media (prefers-reduced-motion: reduce) {
-    body::before, .pour { animation: none; }
+  @media (max-width: 600px) {
+    h1 { font-size: 14.2vw; }
+    p { margin-top: 28px; }
   }
 </style>
 </head>
 <body>
-  <main>
-    <p class="eyebrow">Zaheerabad &middot; Telangana &middot; India</p>
-    <h1>Saraschandrika<span>Industries</span></h1>
-    <div class="pour" aria-hidden="true"></div>
-    <p class="tag">Ferrous castings, made with care.</p>
-    <p class="soon">Opening 2028</p>
-  </main>
-  <footer>&copy; 2026 Saraschandrika Industries Pvt Ltd</footer>
+  <h1><span>Saraschandrika</span><span>Industries</span></h1>
+  <p>Coming soon</p>
+<script>
+  // Size the headline so the longer line fills the page width exactly, whatever the screen.
+  function fit() {
+    var h = document.querySelector('h1');
+    var first = h.querySelector('span');
+    h.style.fontSize = '100px';
+    h.style.fontSize = (100 * h.clientWidth / first.scrollWidth) + 'px';
+  }
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(fit);
+  window.addEventListener('resize', fit);
+</script>
 </body>
 </html>
